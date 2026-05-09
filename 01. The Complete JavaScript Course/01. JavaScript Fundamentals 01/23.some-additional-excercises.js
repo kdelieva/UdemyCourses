@@ -283,42 +283,82 @@ console.log("👉Excercise 09: School Scholarship System👈");
 // Ако има право и на двете, изчисли коя е по-голяма и отпечатай нея: "You get [име] scholarship: [сума] BGN".
 // Ако сумите са равни, предимство има отличната стипендия.
 
+let averageGrade = 4.5;
+let familyIncome = 1240;
+let minSalary = 620;
+let firstName = "Georgi";
 
+let socialScholarship = 0;
+let excellentScholarship = 0;
 
+if((familyIncome < minSalary) && (averageGrade > 4.5)) {
+    socialScholarship = minSalary * (35 / 100);
+}
 
+if(averageGrade >= 5.5) {
+    excellentScholarship = averageGrade * 25;
+}
 
+if((excellentScholarship === 0) && (socialScholarship === 0)) {
+  console.log("No scholarship.");
+} else if(excellentScholarship >= socialScholarship) {
+    console.log(`You get ${firstName} Excellent scholarship: ${excellentScholarship} BGN`);
+}else if(excellentScholarship < socialScholarship) {
+    console.log(`You get ${firstName} Social scholarship: ${socialScholarship} BGN`);
+}
 
-
-
-
-
-
-
-
-
-
-
+console.log("---------------------------------------");
+console.log("👉Excercise 10: Registration Form Validation👈");
 // Задача 10: Валидация на форма за регистрация (Complex Logic)
 // Създаваш логика за проверка на потребителски данни в уеб сайт.
 
 // Данни:
-
 // username (string).
-
 // email (string).
-
 // age (число).
-
 // isAdmin (boolean).
 
 // Изисквания за валидност:
-
 // Потребителското име трябва да е между 5 и 15 символа.
-
 // Имейлът трябва да съдържа задължително @ И . (точка).
-
 // Възрастта трябва да е положително число.
-
 // Специален случай: Ако isAdmin е true, възрастта и името нямат значение (винаги са валидни), но имейлът винаги трябва да е валиден.
 
 // Отпечатай "Registration successful", ако условията са спазени. В противен случай отпечатай "Registration failed: [причина]" (причината трябва да е първото невалидно поле, което срещнеш).
+
+// Данни:
+// username = "User123"
+// email = "test@mail.com"
+// age = 25
+// isAdmin = false
+
+let username = "User123";
+let email = "test@mail.com";
+let nAge = 25;
+let isAdmin = false;
+
+let isValid = false;
+
+let isUserValid = username.length >= 5 && username.length <= 15;
+let isEmailValid = email.includes("@") && email.includes(".");
+let isAgeValid = nAge >= 0;
+
+if(isAdmin) {
+    if(isEmailValid) {
+        isValid = true;
+    }
+} else if(isUserValid && isEmailValid && isAgeValid) {
+    isValid = true;
+}
+
+if(isValid) {
+    console.log("Registration successful");
+} else {
+    if(!isUserValid) {
+         console.log(`Registration failed: Invalid User Name`);
+    }else if(!isEmailValid) {
+        console.log(`Registration failed: Invalid Email`);
+    }else if(!isAgeValid) {
+         console.log(`Registration failed: Invalid Age `);
+    } 
+}
