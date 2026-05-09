@@ -46,11 +46,18 @@ console.log("👉 Excercise 02: Tip Calculator Advanced👈");
 let bill = 20;
 let tip = 0;
 
-tip = (bill <= 300 && bill >= 50) ? bill * (15 / 100) : (bill > 300 ? bill * (20 / 100) : 0);
+tip =
+  bill <= 300 && bill >= 50
+    ? bill * (15 / 100)
+    : bill > 300
+      ? bill * (20 / 100)
+      : 0;
 
 let endSum = bill + tip;
 
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${endSum} eur.`);
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value ${endSum} eur.`,
+);
 
 console.log("--------------------------------------");
 console.log("👉 Excercise 03: Password Test👈");
@@ -68,7 +75,7 @@ let toLowerCase = password.toLowerCase();
 
 let lenght = password.length >= 8;
 let symbolsInclude = password.includes("$") || password.includes("#");
-let isWordInclude = !(toLowerCase.includes('password'));
+let isWordInclude = !toLowerCase.includes("password");
 
 let checker = lenght && symbolsInclude && isWordInclude ? "Secure" : "Insecure";
 
@@ -87,7 +94,10 @@ let stepsCount = 7000;
 let isWeekend = true;
 let target = isWeekend ? 15000 : 10000;
 
-let goal = stepsCount >= target ? 'Goal Reached!' : `Not Reached! You need ${target - stepsCount} steps more.`;
+let goal =
+  stepsCount >= target
+    ? "Goal Reached!"
+    : `Not Reached! You need ${target - stepsCount} steps more.`;
 
 console.log(goal);
 
@@ -107,29 +117,30 @@ let applePrice = 2;
 let bananaPrice = 1.5;
 let orangePrice = 3;
 
-switch(fruit) {
-    case "apple": 
-        price = applePrice;
-        break;
-    case "banana": 
-        price = bananaPrice;
-        break;
-    case "orange":
-        price = orangePrice;
-        break;
-    default: price = 0;
+switch (fruit) {
+  case "apple":
+    price = applePrice;
+    break;
+  case "banana":
+    price = bananaPrice;
+    break;
+  case "orange":
+    price = orangePrice;
+    break;
+  default:
+    price = 0;
 }
 
 let endPrice;
 
-if(price > 0 && isBio) {
-    endPrice = price += (price * (50 / 100));
-    console.log(`1kg ${fruit} is ${endPrice} eur.`);
-} else if(price > 0) {
-    endPrice = price;
-    console.log(`1kg ${fruit} is ${endPrice} eur.`);
+if (price > 0 && isBio) {
+  endPrice = price += price * (50 / 100);
+  console.log(`1kg ${fruit} is ${endPrice} eur.`);
+} else if (price > 0) {
+  endPrice = price;
+  console.log(`1kg ${fruit} is ${endPrice} eur.`);
 } else {
-    console.log(`We haven't got such fruits as ${fruit}!`);
+  console.log(`We haven't got such fruits as ${fruit}!`);
 }
 
 console.log("--------------------------------------");
@@ -141,57 +152,98 @@ console.log("👉 Excercise 06: Air Conditioners Expert👈");
 // Температурата е над 25, но влажността (humidity) е над 60%.
 // Обаче, ако isEcoMode е true, климатикът се включва само ако температурата е над 30 градуса, независимо от влажността.
 
+let temp = 26;
+let humidity = 60;
+let isEcoMode = true;
+let isTurn = false;
+
+if (isEcoMode && temp > 30) {
+  isTurn = true;
+} else {
+  if (temp > 28 || (temp > 25 && humidity >= 60)) {
+    isTurn = true;
+  }
+}
+
+console.log(`Air Conditioner status is: ${isTurn}`);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log("--------------------------------------");
+console.log("👉 Excercise 07: Measurment Converter 👈");
 
 // Задача 7: Преобразувател на мерни единици (Switch)
 // Имаш value (число) и unit (string: "km", "miles", "m").
-
 // Ако е "km", превърни го в метри (* 1000).
-
 // Ако е "miles", превърни го в километри (* 1.6).
-
 // Ако е "m", просто отпечатай стойността.
-
 // Ако е нещо друго, отпечатай: "Unit not supported".
 
+let value = 10;
+let unit = "miles";
+let result;
+
+switch(unit) {
+  case "km": result = `${value * 1000} meters`; break; // meters
+  case "miles": result = `${value * 1.6} km`; break; //km
+  case "m": result = `${value}`; break; //meters
+  default: result = "Unit is not supported";
+}
+
+console.log(`The unit is: ${unit}, the value is: ${result}.`);
+
+
+console.log("--------------------------------------");
+console.log("👉 Excercise 08: Coctail Bar👈");
 // Задача 8: Коктейл бар (Logical NOT & AND)
 // Един коктейл е безплатен само ако са изпълнени всички условия:
-
 // Клиентът е над 18 години.
-
 // Клиентът НЕ е пиян (isDrunk = false).
-
 // Денят е "Happy Hour" ИЛИ клиентът има купон за отстъпка.
 // Напиши логиката, която решава дали клиентът получава "Free Drink".
 
+let age = 19;
+let isDrunk = false;
+let isHappyHourDay = true;
+let hasCoupon = true;
+
+let hasFreeDrink = ((age > 18) && !isDrunk) && (isHappyHourDay || hasCoupon) ? "Free Drink 🍷" : "No Free Drink. 🤷‍♀️";
+
+console.log(hasFreeDrink);
+
+console.log("--------------------------------------");
+console.log("👉 Excercise 09: Universiade👈");
 // Задача 9: Универсиада (Comparison & Logic)
 // Имаш три резултата на отбор А и три резултата на отбор Б.
-
 // Пресметни средния им резултат.
-
 // Отборът печели купата само ако неговият среден резултат е по-висок от този на другия И е поне 100 точки.
-
 // Ако и двата имат над 100 точки и равен резултат -> "Draw".
 // Във всички останали случаи -> "No winner".
 
+let aTeamAvrResult = (105 + 5 + 25) / 3;
+let bTeamAvrResult = (15 + 10 + 105) / 3;
+let winner;
+
+if((aTeamAvrResult > bTeamAvrResult) && (aTeamAvrResult >= 100)) {
+  winner = `The winner is A Team with score ${aTeamAvrResult} 🏆.`;
+} else if((aTeamAvrResult < bTeamAvrResult) && (bTeamAvrResult >= 100)) {
+  winner = `The winner is B Team with score ${bTeamAvrResult} 🏆.`;
+} else if((aTeamAvrResult === bTeamAvrResult) && (aTeamAvrResult > 100)) {
+  winner = "Draw";
+}else {
+  winner = "No Winner 😢.";
+}
+
+console.log(winner);
+
+console.log("--------------------------------------");
+console.log("👉 Excercise 10: Status Break👈");
 // Задача 10: Режим "Почивка" (Ternary & Expression)
 // Имаш променлива hour (0-23). Използвай тернарен оператор, за да присвоиш на променлива status една от две стойности:
-
 // "Working", ако часът е между 9 и 18 (включително).
-
 // "Relaxing", във всички останали случаи.
 // Отпечатай: "Currently I am [status]".
+
+let hour = 15;
+let status = (hour >= 9) && (hour <= 18) ? "Working 🏢" : "Relaxing 😌";
+
+console.log(`Currently I am ${status}.`);
