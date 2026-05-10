@@ -40,7 +40,7 @@ console.log(population(6));
 
 console.log("-----------------------------------");
 console.log("👉Excercise 03: Age Filter👈");
-Условие:
+// Условие:
 // Напиши функция (избери сама дали да е Declaration или Expression), която се казва checkWorkEligibility.
 
 // Функцията трябва да приема един параметър: age (възраст).
