@@ -138,14 +138,40 @@ console.log(secondStatus);
 
 
 console.log("-----------------------------------");
-console.log("👉Excercise 07: Smart Watch👈");
+console.log(`👉Excercise 07: Stock Availability👈
+    `);
 // Проверка на наличност в склад: Напиши функция, която приема orderedQuantity и stockQuantity. Ако поръчаното е повече от наличното, върни колко бройки не достигат. Ако е налично, върни "Order processed".
 
+function stockAvailability(orderedQuantity, stockQuantity) {
+    if(orderedQuantity > stockQuantity) {
+        return String(Math.abs(orderedQuantity - stockQuantity));
+    }else {
+        return "Order processed."
+    }
+}
+
+const firstData = stockAvailability(23, 15);
+const secondData = stockAvailability(17, 19);
+const thirdData = stockAvailability(23, 23);
 
 
+console.log(`Status: ${firstData}
+---
+Status: ${secondData}
+---
+Status: ${thirdData}`);
 
 
+console.log("-----------------------------------");
+console.log(`👉Excercise 08: Fuel Calculator👈
+    `);
 // Калкулатор на разход за гориво: Напиши функционален израз, който приема distance (км), consumption (разход на 100 км) и pricePerLiter. Върни общата сума за пътуването.
+
+
+
+
+
+
 
 // Спортен анализатор: Създай функция scoreStatus, която приема точките на един играч.
 
