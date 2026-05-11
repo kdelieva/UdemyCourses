@@ -163,24 +163,105 @@ Status: ${thirdData}`);
 
 
 console.log("-----------------------------------");
-console.log(`👉Excercise 08: Fuel Calculator👈
-    `);
+console.log(`👉Excercise 08: Fuel Calculator👈`);
 // Калкулатор на разход за гориво: Напиши функционален израз, който приема distance (км), consumption (разход на 100 км) и pricePerLiter. Върни общата сума за пътуването.
 
+const fuelCalculator = function (distance, consumption, pricePerLiter) {
+    return `The consumation is ${(((distance * consumption) / 100) * pricePerLiter).toFixed(2)} eur total fuel price cost.`
+}
+
+const data1 = fuelCalculator(10, 4, 2.23);
+console.log(data1);
 
 
-
-
-
-
+console.log("-----------------------------------");
+console.log(`👉Excercise 09: Sport Analyzer👈`);
 // Спортен анализатор: Създай функция scoreStatus, която приема точките на един играч.
-
 // Под 10: "Amateur"
-
 // 10-30: "Pro"
-
 // Над 30: "Legend"
-
 // Направи я като Function Expression.
+//Изискване: Използвай вложени тернарни оператори (без if/else).
 
+const scoreStatus = function (points) {
+    const result = 0;
+
+    return `${points >= 0 && points < 10 ? "Amateur" : points >= 10 && points <= 30 ? "Pro" : points > 30 ? "Legend" : "Error"}`
+}
+
+const aPoints = scoreStatus(100);
+const bPoints = scoreStatus(5)
+const cPoints = scoreStatus(16)
+const dPoints = scoreStatus(-5)
+
+
+console.log(aPoints);
+console.log(bPoints);
+console.log(cPoints);
+console.log(dPoints);
+
+
+console.log("-----------------------------------");
+console.log(`👉Excercise 10: Mysterious function👈`);
 // Мистериозна функция (Debug task): Създай функция, която приема три числа. Тя трябва да връща най-голямото от тях, но без да използваш Math.max(). Използвай само if/else логика вътре във функцията.
+
+function maxNumber(firstNum, secondNum, thirdNum) {
+    let result = '';
+    if(firstNum > secondNum && firstNum > thirdNum) {
+        result = `First Number ${firstNum} is biggest`;
+    }else if(secondNum > firstNum && secondNum > thirdNum) {
+        result = `Second Number ${secondNum} is biggest`;
+    }else if(thirdNum > firstNum && thirdNum > secondNum) {
+        result = `Third Number ${thirdNum} is biggest`;
+    } else {
+        result = `The number ${firstNum} is equal to the other two!`;
+    }
+
+    return result;
+}
+
+const resultOne = maxNumber(4, 12, 0);
+const resultTwo = maxNumber(24, 16, 4);
+const resultThree = maxNumber(-5, 10, 100);
+const resultFour = maxNumber(1, 1, 1);
+
+console.log(resultOne);
+console.log(resultTwo);
+console.log(resultThree);
+console.log(resultFour);
+
+
+console.log("-----------------------------------");
+console.log(`👉Excercise 10: Mysterious function👈`);
+// Задача 10 (Финална): Генератор на потребителско име
+// Тази задача ще тества умението ти да "сглобяваш" различни части от данни в едно цяло.
+
+// Условие:
+// Напиши функция generateUsername, която приема два параметъра: firstName (стринг) и birthYear (число).
+
+// Част 1: Вземи само първите 3 букви от името и ги направи малки.
+// Част 2: Вземи само последните две цифри от годината (напр. от 1991 искаме "91").
+
+// Подсказка: Превърни годината в стринг със String(birthYear) и използвай .slice(-2).
+
+// Резултат: Съедини двете части и върни готовото потребителско име.
+
+// Пример:
+// generateUsername("Maria", 1998) трябва да върне "mar98".
+// generateUsername("Ivan", 2005) трябва да върне "iva05".
+
+function generateUsername(firstName, birthYear) {
+    const firstThreeLeters = firstName.slice(0, 3).toLowerCase();
+    const latestNums = String(birthYear).slice(2);
+
+    return firstThreeLeters + latestNums;
+
+}
+
+const dataFirst = generateUsername("Jonas", 1991);
+const dataSecond = generateUsername("Georgi", 1984);
+const dataThird = generateUsername("MArYa", 2005);
+
+console.log(dataFirst);
+console.log(dataSecond);
+console.log(dataThird);
