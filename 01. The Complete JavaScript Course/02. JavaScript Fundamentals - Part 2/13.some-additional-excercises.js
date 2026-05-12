@@ -230,7 +230,7 @@ function validation(arr) {
 console.log(validation(arr));
 
 console.log("-----------------------------------")
-console.log("👉Excercise 11: party👈");
+console.log("👉Excercise 11: Party👈");
 
 // const guests = ["Anna", "Bob", "Charlie"]
 
