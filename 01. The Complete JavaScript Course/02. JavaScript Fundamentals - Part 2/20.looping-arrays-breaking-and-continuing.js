@@ -1,6 +1,6 @@
 "use strict";
 
-//Loops trough arrays
+//Loops through arrays
 const jonasArray = [
     'Jonas',
     'Schmedtmann',
