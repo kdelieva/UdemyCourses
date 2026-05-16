@@ -85,3 +85,91 @@ for(let i = 0; i < votes.length; i++) {
 }
 
 console.log(results);
+
+
+console.log("--------------------------------------");
+console.log('👉Excercise 04: Average Score Calculation👈');
+// Задача 4: Изчисляване на средна оценка (Масив от обекти) 🎓
+
+// Условие:
+// Имаш масив със студенти:
+
+// JavaScript
+// const students = [
+//   { name: "Anna", grade: 5.50 },
+//   { name: "Alex", grade: 4.20 },
+//   { name: "Maria", grade: 6.00 }
+// ];
+// Напиши for цикъл, който събира оценките (grade) на всички студенти. След цикъла изчисли средната оценка (общата сума, разделена на броя на студентите) и я принтирай.
+
+const students = [
+  { name: "Anna", grade: 5.50 },
+  { name: "Alex", grade: 4.20 },
+  { name: "Maria", grade: 6.00 }
+];
+
+let studentsGrades = 0;
+
+for(let i = 0; i < students.length; i++) {
+    let student = students[i];
+    studentsGrades += Number(student.grade);
+}
+
+const averageGrade = studentsGrades / students.length;
+console.log(`The average Grade of the students is: ${averageGrade.toFixed(2)}`);
+
+
+console.log("--------------------------------------");
+console.log('👉Excercise 05: Data Types Changes👈');
+// Задача 5: Смяна на типа данни (Mutate Array) 🔄
+// Условие:
+// Имаш масив с цени в стрингов формат: const stringPrices = ["10", "25.50", "40", "5.75"];.
+// Напиши for цикъл, който променя оригиналния масив, като превръща всеки стринг в истинско число (използвай Number() или parseFloat()).
+
+// Тест:
+// След цикъла, console.log(stringPrices) трябва да покаже [10, 25.5, 40, 5.75] (като числа, без кавички).
+
+const stringPrices = ["10", "25.50", "40", "5.75"];
+
+for(let i = 0; i < stringPrices.length; i++) {
+    let price = stringPrices[i];
+    stringPrices[i] = Number(price);
+}
+
+console.log(stringPrices);
+
+
+console.log("--------------------------------------");
+console.log('👉Excercise 06: Sallary Scanner👈');
+// Задача 6: Скенер за заплати 💸
+// Условие:
+// Имаш масив със заплати: const salaries = [1200, 2500, 900, 3400, 1500];.
+// Напиши обект salaryManager със свойство taxFreeLimit: 2000 и метод calculateTaxes.
+// Методът трябва с for цикъл да обходи заплатите. Ако заплатата е над taxFreeLimit, от нея трябва да се извадят 10% данък. Накрая методът връща нов масив с обновените заплати.
+
+const salaries = [1200, 2500, 900, 3400, 1500];
+
+const salaryManager = {
+    taxFreeLimit: 2000,
+
+    calculateTaxes: function (salariesArr) {
+
+        const newSalaries = [];
+            for(let i = 0; i < salariesArr.length; i++) {
+            let salary = salariesArr[i];
+
+            if(salary > this.taxFreeLimit) {
+                salary = salary - (salary * ( 10 / 100));
+                newSalaries.push(salary);
+            }else {
+                newSalaries.push(salary);
+            }
+        }
+
+        return newSalaries;
+    }
+};
+
+const salariesNew = salaryManager.calculateTaxes(salaries);
+console.log(salariesNew);
+
