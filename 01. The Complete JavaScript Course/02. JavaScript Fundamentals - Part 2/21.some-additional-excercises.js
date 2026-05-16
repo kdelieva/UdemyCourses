@@ -173,3 +173,84 @@ const salaryManager = {
 const salariesNew = salaryManager.calculateTaxes(salaries);
 console.log(salariesNew);
 
+
+console.log("--------------------------------------");
+console.log('👉Excercise 07: Longest word👈');
+// Задача 7: Най-дългата дума 📝
+// Условие:
+// Имаш масив от думи: const words = ["JS", "Python", "Java", "C++", "JavaScript"];.
+// Напиши цикъл, който намира коя е думата с най-голяма дължина (използвай .length върху самите стрингове) и я отпечатай в конзолата.
+
+const words = ["JS", "Python", "Java", "C++", "JavaScript"];
+
+let longestWord = '';
+
+for(let i = 0; i < words.length; i++) {
+    let currentWord = words[i];
+    if(currentWord.length > longestWord.length) {
+        longestWord = currentWord;
+    }
+}
+
+console.log(longestWord);
+
+
+console.log("--------------------------------------");
+console.log('👉Excercise 08: Filter Blacklist👈');
+// Задача 8: Филтър "Черен списък" (Blacklist) 🚫
+// Условие:
+// Имаш масив от потребители: const users = ["User1", "Admin", "User2", "Moderator", "User3"];.
+// Напиши цикъл, който прехвърля потребителите в нов масив approvedUsers, ОСВЕН ако потребителят не е "Admin" или "Moderator" (тях ги прескочи с continue).
+
+const users = ["User1", "Admin", "User2", "Moderator", "User3"];
+
+const approvedUsers = [];
+
+for(let i = 0; i < users.length; i++) {
+    let user = users[i];
+
+    if(user === "Admin" || user === "Moderator") continue;
+
+    approvedUsers.push(user);
+}
+
+console.log(approvedUsers);
+
+
+console.log("--------------------------------------");
+console.log('👉Excercise 09: Capital Accumulation (Interest)👈');
+// Задача 9: Натрупване на капитал (Лихва) 📈
+// Условие:
+// Имаш първоначална сума let money = 1000;.
+// Напиши for цикъл, който симулира 5 години. Всяка година (всяка итерация на цикъла) парите се увеличават с 5% лихва (т.е. money = money * 1.05). Накрая изпиши колко пари ще имаш след 5 години.
+
+let money = 1000;
+const years = 5;
+
+let endSum = money;
+
+for(let year = 1; year <= years; year++) {
+    endSum += endSum * (5 / 100);
+}
+
+console.log(`First year the money are ${money.toFixed(2)} eur and for ${years} years the interest is ${(endSum - money).toFixed(2)} eur and the total Sum with interest is: ${endSum.toFixed(2)} eur.`);
+
+
+console.log("--------------------------------------");
+console.log('👉Excercise 10: Titles Corrector👈');
+// Задача 10: Коректор на заглавия (Data Clean) 🪥
+// Условие:
+// Имаш масив със заглавия, които са написани с малки букви: const titles = ["home", "about us", "contact"];.
+// Напиши цикъл, който променя всяка дума така, че да започва с главна буква.
+
+const titles = ["home", "about us", "contact"];
+
+for(let i = 0; i < titles.length; i++) {
+    let currentTitle = titles[i];
+    let firstLetter = currentTitle[0].toUpperCase();
+    let newTitle = firstLetter + currentTitle.slice(1);
+
+    titles[i] = newTitle;
+}
+
+console.log(titles);
