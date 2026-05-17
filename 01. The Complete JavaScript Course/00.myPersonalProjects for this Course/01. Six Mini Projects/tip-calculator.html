@@ -46,21 +46,21 @@
                 <label for="bill" class="form-label-bill"><p class="eur-price-demo">Сметка (eur)</p></label>
                 
                 <input min="0" name="bill" id="bill" type="number" placeholder="0.00">
+               </form>
+                <p class="tip">Бакшиш <span class="tip-percent-value"></span></p>
+                <div class="percent-buttons" id="btns">
+                    <button id="button" value="5" class="tip-percent"><span class="tip-value">5</span>%</button>
 
-                <label for="tip-percent" class="tip">Бакшиш <span class="tip-percent-value"></span></label>
-                <div class="percent-buttons">
-                    <button class="tip-percent"><span class="tip-value">5</span>%</button>
+                    <button value="10" class="tip-percent selected"><span class="tip-value">10</span>%</button>
 
-                    <button class="tip-percent selected"><span class="tip-value">10</span>%</button>
+                    <button value="15" class="tip-percent "><span class="tip-value">15</span>%</button>
 
-                    <button class="tip-percent"><span class="tip-value">15</span>%</button>
-
-                    <button class="tip-percent"><span class="tip-value">20</span>%</button>
+                    <button value="20" class="tip-percent "><span class="tip-value">20</span>%</button>
                 </div>
-
-                <label for="people-number" class="form-label-people">Демо</label>
+               <form>
+                <label for="people-number" class="form-label-people">Брой хора</label>
                 <input min="1" name="people-number" id="people-number" type="number" placeholder="1">
-
+                </form>
                 <div class="tip-info">
                     <div class="tip-info-row">
                         <p>Бакшиш</p>
@@ -78,6 +78,6 @@
             </form>
         </div>
     </section>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
   </body>
 </html>
