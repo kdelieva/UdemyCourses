@@ -159,6 +159,11 @@ hr {
 /* Single-Page Design Start */
 .tip-hero {
   text-align: left;
+  max-width: 978px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .back-link,
