@@ -267,7 +267,7 @@ hr {
   cursor: pointer;
 }
 
-.selected, 
+.selected,
 .tip-percent.selected,
 .tip-percent:hover {
   background: radial-gradient(circle at 10% 30%, #6c50e99b, #d57aea 50%);
@@ -314,7 +314,7 @@ hr {
     oklch(72% 0.18 320)
   );
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  background-clip: text;
   font-size: 20px;
 }
 /* Single-Page Design END */
