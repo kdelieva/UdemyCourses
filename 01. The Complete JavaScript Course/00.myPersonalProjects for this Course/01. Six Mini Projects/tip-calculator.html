@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip Calcultor</title>
+  </head>
+  <body>
+    <section class="hero tip-hero">
+      <div class="info-box tip-back-to-projects">
+        <span
+          ><a class="back-link" href="./index.html">← Всички проекти</a></span
+        >
+      </div>
+      <div class="single-page-title">
+        <h1>🧾 Калкулатор за бакшиш</h1>
+      </div>
+      <div class="single-page-p">
+        <p>
+          Въведи сметката, избери процент бакшиш и брой хора — получаваш сума на
+          човек.
+        </p>
+      </div>
+      <div class="tasks-list single-page-conceptions">
+        <ul>
+            <li>functions</li>
+            <li>operators</li>
+            <li>math</li>
+            <li>Number()</li>
+            <li>toFixed</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="tip-calc-body">
+        <div class="tip-calc">
+            <h2 class="tip-calc-demo-title">ДЕМО</h2>
+            <form>
+                <label for="bill" class="form-label-bill"><p class="eur-price-demo">Сметка (eur)</p></label>
+                
+                <input min="0" name="bill" id="bill" type="number" placeholder="0.00">
+
+                <label for="tip-percent" class="tip">Бакшиш <span class="tip-percent-value"></span></label>
+                <div class="percent-buttons">
+                    <button class="tip-percent"><span class="tip-value">5</span>%</button>
+
+                    <button class="tip-percent selected"><span class="tip-value">10</span>%</button>
+
+                    <button class="tip-percent"><span class="tip-value">15</span>%</button>
+
+                    <button class="tip-percent"><span class="tip-value">20</span>%</button>
+                </div>
+
+                <label for="people-number" class="form-label-people">Демо</label>
+                <input min="1" name="people-number" id="people-number" type="number" placeholder="1">
+
+                <div class="tip-info">
+                    <div class="tip-info-row">
+                        <p>Бакшиш</p>
+                        <p class="tip-bold">0.00 eur</p>
+                    </div>
+                    <div class="tip-info-row">
+                        <p>Общо</p>
+                        <p class="tip-bold">0.00 eur</p>
+                    </div>
+                    <div class="tip-info-row tip-row-three">
+                        <p>На човек</p>
+                        <p class="tip-bold colored">0.00 eur</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
