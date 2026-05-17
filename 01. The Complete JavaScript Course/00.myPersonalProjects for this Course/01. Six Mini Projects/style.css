@@ -156,13 +156,16 @@ hr {
   padding-right: 20px;
 }
 
-
 /* Single-Page Design Start */
 .tip-hero {
   text-align: left;
 }
 
-.back-link, .back-link:hover, .back-link:visited, .back-link:focus, .back-link:active {
+.back-link,
+.back-link:hover,
+.back-link:visited,
+.back-link:focus,
+.back-link:active {
   color: #fff;
   padding: 10px;
 }
@@ -189,7 +192,7 @@ hr {
 }
 
 .tip-calc-body {
-  background-color: #F9FAFE;
+  background-color: #f9fafe;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 30px;
@@ -209,14 +212,14 @@ hr {
   padding-left: 25px;
   padding-right: 25px;
   border-radius: 20px;
-  background-color: #FFFFFF;
-  border: 1px solid #EBEEF5;
+  background-color: #ffffff;
+  border: 1px solid #ebeef5;
 }
 
 .tip-calc-demo-title {
   font-size: 15px;
   font-weight: 500;
-  color: #6C50E9;
+  color: #6c50e9;
 }
 
 .eur-price-demo {
@@ -231,13 +234,14 @@ hr {
   margin-bottom: 10px;
 }
 
-#bill, #people-number {
+#bill,
+#people-number {
   border-radius: 5px;
-  border: 1px solid #EBEEF5;
-  background-color: #F9FAFE;
+  border: 1px solid #ebeef5;
+  background-color: #f9fafe;
   width: 100%;
   padding: 10px;
-  outline-color: #6C50E9;
+  outline-color: #6c50e9;
   margin-bottom: 15px;
 }
 
@@ -253,16 +257,17 @@ hr {
   width: 100%;
   border-radius: 10px;
   border: none;
-  background-color: #EFF1FF;
+  background-color: #eff1ff;
   padding: 5px 10px;
   height: 40px;
 }
 
-.tip-percent:hover{
+.tip-percent:hover {
   cursor: pointer;
 }
 
-.selected, .tip-percent:hover {
+.selected,
+.tip-percent:hover {
   background: radial-gradient(circle at 10% 30%, #6c50e99b, #d57aea 50%);
   color: #fff;
   font-weight: 600;
@@ -273,10 +278,10 @@ hr {
 }
 
 .tip-info {
-  background-color: #F5F0FF;
+  background-color: #f5f0ff;
   padding: 20px;
   border-radius: 20px;
-  color: #5C6375;
+  color: #5c6375;
   font-size: 14px;
   display: flex;
   flex-direction: column;
@@ -296,18 +301,21 @@ hr {
 }
 
 .tip-row-three {
-    padding-top: 20px;
-    border-top: 2px solid #EEECFA;
+  padding-top: 20px;
+  border-top: 2px solid #eeecfa;
 }
 
 .colored {
-  background: -webkit-linear-gradient(135deg, oklch(55% .22 285), oklch(72% .18 320));
+  background: -webkit-linear-gradient(
+    135deg,
+    oklch(55% 0.22 285),
+    oklch(72% 0.18 320)
+  );
   -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+  -webkit-background-clip: text;
   font-size: 20px;
 }
 /* Single-Page Design END */
-
 
 /* Mobile VERSION */
 @media screen and (max-width: 1280px) {
@@ -341,9 +349,8 @@ hr {
     padding-right: 10px;
     padding-top: 50px;
     padding-bottom: 40px;
-
   }
-  .cards{
+  .cards {
     padding-left: 10px;
     padding-right: 10px;
   }
