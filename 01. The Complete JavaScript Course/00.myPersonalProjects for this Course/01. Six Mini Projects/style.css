@@ -250,6 +250,10 @@ hr {
   margin-bottom: 15px;
 }
 
+.tip-inside {
+  font-size: 14px;
+}
+
 .percent-buttons {
   width: 100%;
   display: flex;
