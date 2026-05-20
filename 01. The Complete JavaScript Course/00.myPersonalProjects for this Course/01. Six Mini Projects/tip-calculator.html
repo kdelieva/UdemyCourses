@@ -44,11 +44,8 @@
     <section class="tip-calc-body">
         <div class="tip-calc">
             <h2 class="tip-calc-demo-title">ДЕМО</h2>
-            <form>
-                <label for="bill" class="form-label-bill"><p class="eur-price-demo">Сметка (eur)</p></label>
-                
-                <input min="0" name="bill" id="bill" type="number" placeholder="0.00">
-               </form>
+            
+                <input class="bill" type="number" placeholder="0.00">
                 <p class="tip">Бакшиш: <span class="tip-inside"></span></p>
                 <div class="percent-buttons" id="btns">
                     <button id="btn-one" value="5" class="tip-percent"><span class="tip-value">5</span>%</button>
@@ -66,7 +63,7 @@
                 <div class="tip-info">
                     <div class="tip-info-row">
                         <p>Бакшиш</p>
-                        <p class="tip-bold">0.00 eur</p>
+                        <p class="tip-sum">0.00 eur</p>
                     </div>
                     <div class="tip-info-row">
                         <p>Общо</p>
@@ -74,7 +71,7 @@
                     </div>
                     <div class="tip-info-row tip-row-three">
                         <p>На човек</p>
-                        <p class="tip-bold colored">0.00 eur</p>
+                        <p class="tip-bold colored per-person">0.00 eur</p>
                     </div>
                 </div>
             </form>

@@ -239,7 +239,7 @@ hr {
   margin-bottom: 10px;
 }
 
-#bill,
+.bill,
 #people-number {
   border-radius: 5px;
   border: 1px solid #ebeef5;

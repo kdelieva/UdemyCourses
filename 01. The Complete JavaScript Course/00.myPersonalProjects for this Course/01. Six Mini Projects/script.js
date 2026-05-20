@@ -1,16 +1,36 @@
 "use strict";
-const bill = document.querySelector("input");
-const percentTip = document.querySelector(".tip-bold");
-const selectedButton = document.querySelector(".selected");
-const tipPerc = document.querySelector(".tip-inside");
 
-bill.addEventListener("input", () => {
-  const tip = Number(bill.value);
-  percentTip.innerHTML = `${tip.toFixed(2)} eur`;
+//Tip Calculator LOGIC
+const billValue = document.querySelector(".bill");
+let totalBill = document.querySelector(".bill-total");
+const billPerPerson = document.querySelector(".per-person");
+const tipValue = document.querySelector(".selected");
+const tipInside = document.querySelector(".tip-inside");
+const tipSum = document.querySelector(".tip-sum");
+const chooseBtn = document.querySelector(".tip-value");
+
+//Add bill to Tip
+billValue.addEventListener("input", function () {
+  let billSum = Number(billValue.value);
+  totalBill.textContent = `${billSum.toFixed(2)} eur`;
+  billPerPerson.textContent = `${billSum.toFixed(2) / 1} eur`;
 });
 
-selectedButton.addEventListener("click", () => {
-  const tip = Number(bill.value * (Number(selectedButton.value) / 100));
-  percentTip.innerHTML = `${tip.toFixed(2)} eur`;
-  tipPerc.innerHTML = `${Number(selectedButton.value)}%`;
+// Select Button
+
+//Select Logic
+tipValue.addEventListener("click", function () {
+  const containsSelectedClass = (tipInside.textContent = `${tipValue.value}%`);
+  let billSum = Number(billValue.value);
+  const tip = Number(tipValue.value);
+  const totalTip = billSum * (tip / 100);
+  tipSum.textContent = `${totalTip.toFixed(2)} eur`;
+  totalBill.textContent = `${(billSum + totalTip).toFixed(2)} eur`;
+  billPerPerson.textContent = `${(billSum + totalTip).toFixed(2) / 1} eur`;
+
+  if (containsSelectedClass) {
+    tipValue.classList.remove("selected");
+  } else {
+    tipValue.classList.add("selected");
+  }
 });
