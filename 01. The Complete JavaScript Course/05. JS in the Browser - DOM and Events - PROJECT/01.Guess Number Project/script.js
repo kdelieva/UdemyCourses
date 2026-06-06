@@ -65,7 +65,7 @@ document.querySelector('.again').addEventListener('click', function() {
 
   document.querySelector('.message').textContent = 'Start guessing...';
   document.querySelector('.score').textContent = score;
-  document.querySelector('.number') = '?'; //Missing in my sollution
+  document.querySelector('.number') = '?'; //Missing in my solution
   document.querySelector('.guess').value = '';
 
   document.querySelector('body').style.backgroundColor = "#222";
