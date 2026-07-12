@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .excecise-number {
     color: red;
 }
@@ -10,4 +16,75 @@
 /* Excercise 02 */
 .hidden {
     display: none;
+}
+
+.overlay {
+    width: 100px;
+    height: 100px;
+    background-color:#979797;
+}
+
+.active {
+    background-color: greenyellow;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.acc-header {
+    background-color: black;;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}
+
+.acc-content {
+    background-color: #979797;
+    padding: 20px;
+}
+
+.counter {
+    display: flex;
+    gap: 10px;
+    background-color: #979797;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5.5px #1c1b1b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.counter-btn {
+    background-color:#492c08;
+    border: 2px solid #492c08;;
+    padding: 5px 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.counter-btn:hover {
+    border: 2px solid #b77421;
+}
+
+.counter-text {
+    background-color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    border-inline: 3px solid #b87a07;
+}
+
+.disabled {
+    background-color: #979797;
+    cursor: not-allowed;
 }
