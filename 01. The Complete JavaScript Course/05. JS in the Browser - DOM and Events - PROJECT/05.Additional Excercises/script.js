@@ -115,11 +115,30 @@ const counterBtn = document.querySelector(".counter-btn");
 const counterNumber = document.querySelector(".counter-text");
 
 const counterChecker = function () {
-     count++;
+  if (count < 10) {
+    count++;
+  }
 
   if (count === 10) {
     counterBtn.classList.add("disabled");
+    counterNumber.classList.add("disabled");
   }
-    counterNumber.textContent = count;
+  counterNumber.textContent = count;
 };
+
 counterBtn.addEventListener("click", counterChecker);
+
+//Excercise 08
+// Закачи клик събитие на backdrop.Ако потребителят кликне директно върху backdrop (а не върху вътрешния modal-box), добави клас hidden на backdrop. Жокер: Провери свойството e.target на събитието.
+
+const backdropDiv = document.querySelector(".backdrop");
+const modalBoxDiv = document.querySelector(".modal-box");
+
+backdropDiv.addEventListener("click", function (e) {
+  modalBoxDiv.classList.add("hidden-box");
+});
+
+modalBoxDiv.addEventListener("click", function (e) {
+  e.stopPropagation();
+});
+
